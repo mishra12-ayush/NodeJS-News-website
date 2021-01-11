@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS News</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><p>Node.Js News</p></div>
+        <div class="header__search">
+            <form action="/" method="POST">
+                <input type="text" class="search" name="search" placeholder="Search for news" required>
+                <input type="submit" class="searchbutton" value="Search">
+            </form>
+        </div>
+    </header>
+    <div class="headlines">
+        <h1><center>Browse Topics</center></h1><br><br><br>
+        <ul>
+            <li><a href="/bitcoin">Bitcoin News</a></li>
+            <li><a href="/business">Business News</a></li>
+            <li><a href="/apple">Articles mentioning Apple</a></li>
+            <li><a href="/techcrunch">News from TechCrunch</a></li>
+        </ul>
+        <br>
+    </div>
+    <h1 class="headd">Bitcoin News</h1>
+    <div class="wrapper">
+        
+            <% articles.forEach(function(article, index) { %>
+                <div class="news">
+                    <img src="<%- article.urlToImage %>" alt="<%- article.title %>">
+                    <a href="<%- article.url %>" class="news_card">
+                    <h2><%- article.title %></h2>
+                    <p><%- article.description %></p>
+                    </a>  
+                </div>          
+            <% }) %>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,3 @@
+axios, body-parser, ejs, express
+Nodemon(npm install --save-dev nodemon)
+Your API key is: 0c7710f1dbc84c3d95b5d5ad85434c73(newsapi.org)
